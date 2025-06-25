@@ -8,7 +8,10 @@ let pieChart = new Chart(ctx, {
     labels: categories,
     datasets: [{
       data: amounts,
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#66bb6a', '#ab47bc'],
+      backgroundColor: [
+        '#FF6384', '#36A2EB', '#FFCE56',
+        '#66bb6a', '#ab47bc', '#ffa726', '#26a69a'
+      ],
     }]
   },
   options: {
