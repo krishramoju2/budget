@@ -1,10 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+with open("index.html", "r") as f:
+    html_content = f.read()
 
-if __name__ == '__main__':
+@app.route("/")
+def index():
+    return render_template_string(html_content)
+
+if __name__ == "__main__":
     app.run(debug=True)
